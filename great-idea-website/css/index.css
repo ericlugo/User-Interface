@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+ /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5 {
 /* Your code starts here! */
 
 body {
-	width: 900px;
+	width: 876px;
 	margin: 0 auto;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 .logo {
 	display: inline-block;
-	margin-left: 100px;
+	margin-left: 70px;
 	vertical-align: middle;
 }
 
@@ -117,11 +117,38 @@ header {
 	color: black;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 18px;
-	padding: 0 40px;
 	margin-top: 10px;
+	padding: 0 40px;
 }
 header img {
 	display: inline-block;
 	vertical-align: middle;
 	width: 49%;
+}
+
+/* CONTENT */
+#content-container {
+	border-bottom: 1px solid black;
+}
+#content-container div section {
+	display: inline-block;
+	margin: 40px 0;
+}
+#section-one section {
+	width: 436px;
+}
+#section-two section {
+	width: 289px;
+}
+
+/* CONTACT */
+#contact-container {
+	margin: 40px 0;
+}
+
+/* FOOTER */
+footer {
+	font-size: 14px;
+	margin-bottom: 80px;
+	text-align: center;
 }

@@ -54,17 +54,32 @@ table {
 
 html, body {
     height: 100%;
-    font-family: 'Titillium Web', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
+    font-family: cursive;
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
 
 /* Your code starts here! */
 
+
+
+/* FONT SET */
+html, body {
+	font-family: 'Rajdhani', sans-serif;
+}
+h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+}
+h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+
+/* BODY */
 body {
 	width: 876px;
 	margin: 0 auto;
@@ -72,33 +87,53 @@ body {
 
 /* NAV */
 #nav-container {
+	background-color: #eeeeee;
+	height: 100px;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
 	width: 100%;
+	z-index: 1;
 }
 #nav-container nav {
 	display: inline-block;
+	margin-left: -20px;
 	margin-top: 30px;
 }
 #nav-container nav a {
-	color: #bbbbbb;
+	border-bottom: 1px solid #eeeeee;
+	color: #555555;
 	display: inline-block;
 	font-size: 14px;
-	margin: auto 30px;
+	margin: auto 20px;
+	padding: 10px;
 	text-decoration: none;
 	vertical-align: middle;
+	transition:
+		background-color .25s ease-in-out,
+		border-bottom .25s ease-in-out,
+		color .25s ease-in-out;
 }
-#nav-container #first-item {
-	margin-left: 0;
+#nav-container #active-page {
+	border-bottom: 1px solid #bbbbbb;
+	color: #222222;
+}
+#nav-container nav a:hover {
+	background-color: #ffffff;
+	border-bottom: 1px solid #bbbbbb;
+	color: #222222;
 }
 .logo {
 	display: inline-block;
-	margin-left: 70px;
+	margin-left: 90px;
 	vertical-align: middle;
 }
 
 /* HEADER */
 header {
 	border-bottom: 1px solid black;
-	margin-top: 50px;
+	margin-top: 150px;
 	padding-bottom: 50px;
 	width: 100%;
 }
@@ -115,10 +150,18 @@ header {
 	background: white;
 	border: 1px solid black;
 	color: black;
-	font-family: 'Titillium Web', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
+	font-weight: 500;
 	margin-top: 10px;
-	padding: 0 40px;
+	padding: 5px 40px;
+	transition:
+		background .25s ease-in-out,
+		padding .25s ease-in-out;
+}
+#call-to-action-container button:hover {
+	background: #dddddd;
+	padding: 5px 55px; 
 }
 header img {
 	display: inline-block;
@@ -134,8 +177,11 @@ header img {
 	display: inline-block;
 	margin: 40px 0;
 }
+#content-container div section h2 {
+	text-transform: uppercase;
+}
 #section-one section {
-	width: 436px;
+	width: 435px;
 }
 #section-two section {
 	width: 289px;
@@ -151,4 +197,20 @@ footer {
 	font-size: 14px;
 	margin-bottom: 80px;
 	text-align: center;
+}
+
+/* SERVICE.HTML STYLING */
+#section-wrap {
+	margin: 150px 0 50px 0;
+	width: 100%;
+	/* background: url(../img/screwdriver.jpg); */
+}
+#image-wrap {
+	width: 33%;
+	height: 100%;
+	/* background: url(../img/screwdriver.jpg); */
+}
+#content-wrap section {
+	width: 66%;
+	/* background: url(../img/screwdriver.jpg); */
 }

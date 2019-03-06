@@ -49,44 +49,30 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Raleway', 'Titillium Web', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
 }
+
+
 
 /* Your code starts here! */
 
-
-
-/* FONT SET */
-html, body {
-	font-family: 'Rajdhani', sans-serif;
-}
-h1 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 900;
-}
-h2, h3, h4, h5, h6 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 500;
-}
-
-/* BODY */
+/* GENERAL SETTINGS */
 body {
 	width: 876px;
 	margin: 0 auto;
 }
-
-/* NAV */
-#nav-container {
+#main-nav {
 	background-color: #eeeeee;
 	height: 100px;
 	left: 0;
@@ -96,12 +82,12 @@ body {
 	width: 100%;
 	z-index: 1;
 }
-#nav-container nav {
+#main-nav nav {
 	display: inline-block;
 	margin-left: -20px;
 	margin-top: 30px;
 }
-#nav-container nav a {
+#main-nav nav a {
 	border-bottom: 1px solid #eeeeee;
 	color: #555555;
 	display: inline-block;
@@ -115,11 +101,11 @@ body {
 		border-bottom .25s ease-in-out,
 		color .25s ease-in-out;
 }
-#nav-container #active-page {
+#main-nav #active-page {
 	border-bottom: 1px solid #bbbbbb;
 	color: #222222;
 }
-#nav-container nav a:hover {
+#main-nav nav a:hover {
 	background-color: #ffffff;
 	border-bottom: 1px solid #bbbbbb;
 	color: #222222;
@@ -129,24 +115,30 @@ body {
 	margin-left: 90px;
 	vertical-align: middle;
 }
+footer {
+	font-size: 14px;
+	margin-bottom: 80px;
+	text-align: center;
+}
 
-/* HEADER */
-header {
+/* INDEX PAGE FORMATTING */
+/* <== Header ==> */
+#index-header {
 	border-bottom: 1px solid black;
 	margin-top: 150px;
 	padding-bottom: 50px;
 	width: 100%;
 }
-#call-to-action-container {
+#index-header div {
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
 	width: 49%;
 }
-#call-to-action-container h1 {
+#index-header div h1 {
 	font-size: 72px;
 }
-#call-to-action-container button {
+#index-header div button {
 	background: white;
 	border: 1px solid black;
 	color: black;
@@ -159,58 +151,133 @@ header {
 		background .25s ease-in-out,
 		padding .25s ease-in-out;
 }
-#call-to-action-container button:hover {
+#index-header div button:hover {
 	background: #dddddd;
 	padding: 5px 55px; 
 }
-header img {
+#index-header img {
 	display: inline-block;
 	vertical-align: middle;
 	width: 49%;
 }
-
-/* CONTENT */
-#content-container {
+/* <== Content ==> */
+#index-content {
 	border-bottom: 1px solid black;
 }
-#content-container div section {
+#index-content div section {
 	display: inline-block;
 	margin: 40px 0;
 }
-#content-container div section h2 {
+#index-content div section h2 {
 	text-transform: uppercase;
 }
-#section-one section {
+#index-content #section-one section {
 	width: 435px;
 }
-#section-two section {
+#index-content #section-two section {
 	width: 289px;
 }
-
-/* CONTACT */
+/* <== Contact ==> */
 #contact-container {
 	margin: 40px 0;
 }
 
-/* FOOTER */
-footer {
-	font-size: 14px;
-	margin-bottom: 80px;
-	text-align: center;
+/* SERVICE PAGE STYLING */
+/* <== Header ==> */
+#services-header {
+	margin: 100px 0 50px 0;
+	padding: 50px 0;
+	border-bottom: 1px solid black;
 }
-
-/* SERVICE.HTML STYLING */
-#section-wrap {
-	margin: 150px 0 50px 0;
+#services-header section {
+	margin-top: 50px;
+}
+#services-header section h1 {
+	font-size: 32px;
+}
+/* <== Content ==> */
+#services-content {
+	border-bottom: 1px solid black;
+	margin-bottom: 50px;
+}
+#services-content div {
+	background-color: #eeeeee;
+	padding: 50px;
+	margin: 50px 0;
 	width: 100%;
-	/* background: url(../img/screwdriver.jpg); */
+	vertical-align: middle;
+	position: relative;
 }
-#image-wrap {
+#services-content div .image-wrap {
 	width: 33%;
-	height: 100%;
-	/* background: url(../img/screwdriver.jpg); */
+	position: absolute;
+	top: 50px;
+	bottom: 50px;
+	left: 50px;
+	right: 50px;
 }
-#content-wrap section {
-	width: 66%;
-	/* background: url(../img/screwdriver.jpg); */
+#services-content div:nth-child(odd) .image-wrap {
+	margin: 0;	
+}
+#services-content div:nth-child(even) .image-wrap {
+	margin: 0 0 0 56%;
+}
+#services-content div .content-wrap {
+	width: 60%;
+}
+#services-content div:nth-child(odd) .content-wrap {
+	margin: 0 0 0 40%;
+}
+#services-content div:nth-child(even) .content-wrap {
+	margin: 0;
+}
+#services-one .image-wrap {
+	background: #bbbbbb url(../img/screwdriver.jpg) no-repeat center;
+	background-size: cover;
+}
+#services-two .image-wrap {
+	background: #bbbbbb url(../img/screwdriver.jpg) no-repeat center;
+	background-size: cover;
+}
+#services-three .image-wrap {
+	background: #bbbbbb url(../img/screwdriver.jpg) no-repeat center;
+	background-size: cover;
+}
+#services-four .image-wrap {
+	background: #bbbbbb url(../img/screwdriver.jpg) no-repeat center;
+	background-size: cover;
+}
+#services-five .image-wrap {
+	background: #bbbbbb url(../img/screwdriver.jpg) no-repeat center;
+	background-size: cover;
+}
+#services-six .image-wrap {
+	background: #bbbbbb url(../img/screwdriver.jpg) no-repeat center;
+	background-size: cover;
+}
+/* <== Facts ==> */
+#services-facts {
+	margin-bottom: 50px;
+	
+}
+#services-facts section{
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+}
+#services-facts section h2 {
+	margin-bottom: 25px;
+}
+#services-facts section ul {
+	list-style: square;
+	list-style-position: inside;
+	padding-top: 25px;
+}
+#services-facts section ul li {
+	margin: 10px 0;
+}
+#services-facts img {
+	display: inline-block;
+	width: 45%;
+	margin-left: 9%;
 }
